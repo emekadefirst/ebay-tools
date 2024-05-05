@@ -1,0 +1,45 @@
+Here's a simple README file for your API and fetch scripts:
+
+---
+
+# eBay Product API
+
+## Description
+
+This project consists of two scripts:
+
+- **api.py**: A FastAPI application that serves as an API for retrieving eBay product information from a SQLite database.
+- **fetch.py**: A script that scrapes eBay product data and inserts it into the SQLite database.
+
+## Requirements
+
+- Python 3.12 or higher
+- Libraries: FastAPI, sqlmodel, requests, BeautifulSoup
+
+## Usage
+
+1. Clone the repository to your local machine.
+2. Install the required libraries by running:
+   ```
+   pip install fastapi sqlmodel requests beautifulsoup4
+   ```
+3. Run the `fetch.py` script to populate the SQLite database with eBay product data.
+   ```
+   python fetch.py
+   ```
+4. Run the `api.py` script to start the FastAPI server.
+   ```
+   python api.py
+   ```
+5. Access the API endpoints:
+   - `/products/`: Get a list of products.
+   - `/product/{product_id}`: Get a specific product by ID.
+   - `/search/?query={search_query}`: Search for products based on a query string.
+
+## Note
+
+- By default, the API server runs on `http://127.0.0.1:8000`.
+- Ensure that the SQLite database (`data.db`) exists in the project directory.
+
+---
+
