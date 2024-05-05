@@ -1,23 +1,50 @@
+<h1>eBay Product API</h1>
 
+<h2>Description</h2>
 
-# eBay Product API
+<p>This project consists of two scripts:</p>
 
-## Description
+<ul>
+  <li><strong>api.py</strong>: A FastAPI application that serves as an API for retrieving eBay product information from a SQLite database.</li>
+  <li><strong>fetch.py</strong>: A script that scrapes eBay product data and inserts it into the SQLite database.</li>
+</ul>
 
-This project consists of two scripts:
+<h2>Requirements</h2>
 
-- **api.py**: A FastAPI application that serves as an API for retrieving eBay product information from a SQLite database.
-- **fetch.py**: A script that scrapes eBay product data and inserts it into the SQLite database.
+<ul>
+  <li>Python 3.12 or higher</li>
+  <li>Libraries: FastAPI, sqlmodel, requests, BeautifulSoup</li>
+</ul>
 
-## Requirements
+<h2>Usage</h2>
 
-- Python 3.12 or higher
-- Libraries: FastAPI, sqlmodel, requests, BeautifulSoup
+<ol>
+  <li><strong>Clone the repository to your local machine.</strong></li>
+  <li>
+    <strong>Install the required libraries:</strong>
+    <pre><code>pip install fastapi sqlmodel requests beautifulsoup4</code></pre>
+  </li>
+  <li>
+    <strong>Run the <code>fetch.py</code> script to populate the SQLite database with eBay product data:</strong>
+    <pre><code>python fetch.py</code></pre>
+  </li>
+  <li>
+    <strong>Run the <code>api.py</code> script to start the FastAPI server:</strong>
+    <pre><code>python api.py</code></pre>
+  </li>
+  <li>
+    <strong>Access the API endpoints:</strong>
+    <ul>
+      <li><strong>/products/</strong>: Get a list of products.</li>
+      <li><strong>/product/{product_id}</strong>: Get a specific product by ID.</li>
+      <li><strong>/search/?query={search_query}</strong>: Search for products based on a query string.</li>
+    </ul>
+  </li>
+</ol>
 
-## Usage
+<h2>Note</h2>
 
-1. **Clone the repository to your local machine.**
-
-2. **Install the required libraries:**
-   ```bash
-   pip install fastapi sqlmodel requests beautifulsoup4
+<ul>
+  <li>By default, the API server runs on <code>http://127.0.0.1:8000</code>.</li>
+  <li>Ensure that the SQLite database (<code>data.db</code>) exists in the project directory.</li>
+</ul>
