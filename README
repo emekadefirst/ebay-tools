@@ -1,4 +1,12 @@
-Here's a simple README file for your API and fetch scripts:
+
+<div align=right>
+
+## eBay Product API
+______________________________________________________
+
+## Description
+
+Got it! Here's the README formatted exactly as you've described:
 
 ---
 
@@ -18,23 +26,27 @@ This project consists of two scripts:
 
 ## Usage
 
-1. Clone the repository to your local machine.
-2. Install the required libraries by running:
-   ```
+1. **Clone the repository to your local machine.**
+
+2. **Install the required libraries:**
+   ```bash
    pip install fastapi sqlmodel requests beautifulsoup4
    ```
-3. Run the `fetch.py` script to populate the SQLite database with eBay product data.
-   ```
+
+3. **Run the `fetch.py` script to populate the SQLite database with eBay product data:**
+   ```bash
    python fetch.py
    ```
-4. Run the `api.py` script to start the FastAPI server.
-   ```
+
+4. **Run the `api.py` script to start the FastAPI server:**
+   ```bash
    python api.py
    ```
-5. Access the API endpoints:
-   - `/products/`: Get a list of products.
-   - `/product/{product_id}`: Get a specific product by ID.
-   - `/search/?query={search_query}`: Search for products based on a query string.
+
+5. **Access the API endpoints:**
+   - **`/products/`**: Get a list of products.
+   - **`/product/{product_id}`**: Get a specific product by ID.
+   - **`/search/?query={search_query}`**: Search for products based on a query string.
 
 ## Note
 
@@ -43,3 +55,4 @@ This project consists of two scripts:
 
 ---
 
+Let me know if you need any further adjustments!
